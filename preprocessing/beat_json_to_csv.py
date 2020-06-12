@@ -24,14 +24,15 @@ if __name__ == "__main__":
     with open(input_json_path) as f:
         for l in f:
             data.append(eval(l))
-    print('Input {} file with length {}.'.format(input_finput_json_pathile_path, len(data)))
+    print('Input {} file with length {}.'.format(input_json_path, len(data)))
+    
     # check keys
     keys = data[0].keys()
-    print('Keys: '.format(list(keys)))
+    print('Keys: ', keys)
+    
     # write to csv
     with open(output_csv_path, 'w') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
-        dict_writer.writerows(data[:10])
-
+        dict_writer.writerows(data)
 
