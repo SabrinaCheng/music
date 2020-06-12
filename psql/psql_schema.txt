@@ -1,0 +1,308 @@
+bars_confidence VARCHAR(10485760), 
+bars_start VARCHAR(10485760), 
+beats_confidence VARCHAR(10485760), 
+beats_start VARCHAR(10485760), 
+sections_confidence VARCHAR(10485760), 
+sections_start VARCHAR(10485760), 
+segments_confidence VARCHAR(10485760), 
+segments_loudness_max VARCHAR(10485760), 
+segments_loudness_max_time VARCHAR(10485760), 
+segments_loudness_start VARCHAR(10485760), 
+segments_pitches VARCHAR(10485760), 
+segments_start VARCHAR(10485760), 
+segments_timbre VARCHAR(10485760), 
+analysis_sample_rate NUMERIC(10, 3), 
+audio_md5 VARCHAR(10485760), 
+danceability NUMERIC(10, 3), 
+duration NUMERIC(10, 3), 
+end_of_fade_in NUMERIC(10, 3), 
+energy NUMERIC(10, 3), 
+idx_bars_confidence SMALLINT, 
+idx_bars_start SMALLINT, 
+idx_beats_confidence SMALLINT, 
+idx_beats_start SMALLINT, 
+idx_sections_confidence SMALLINT, 
+idx_sections_start SMALLINT, 
+idx_segments_confidence SMALLINT, 
+idx_segments_loudness_max SMALLINT, 
+idx_segments_loudness_max_time SMALLINT, 
+idx_segments_loudness_start SMALLINT, 
+idx_segments_pitches SMALLINT, 
+idx_segments_start SMALLINT, 
+idx_segments_timbre SMALLINT, 
+idx_tatums_confidence SMALLINT, 
+idx_tatums_start SMALLINT, 
+key SMALLINT, 
+key_confidence NUMERIC(10, 3), 
+loudness NUMERIC(10, 3), 
+mode SMALLINT, 
+mode_confidence NUMERIC(10, 3), 
+start_of_fade_out NUMERIC(10, 3), 
+tempo NUMERIC(10, 3), 
+time_signature SMALLINT, 
+time_signature_confidence NUMERIC(10, 3), 
+track_id VARCHAR(10485760) PRIMARY KEY, 
+tatums_confidence VARCHAR(10485760), 
+tatums_start VARCHAR(10485760), 
+artist_terms VARCHAR(10485760), 
+artist_terms_freq VARCHAR(10485760), 
+artist_terms_weight VARCHAR(10485760), 
+similar_artists VARCHAR(10485760), 
+analyzer_version VARCHAR(10485760), 
+artist_7digitalid VARCHAR(7), 
+artist_familiarity NUMERIC(10, 3), 
+artist_hotttnesss NUMERIC(10, 3), 
+artist_id VARCHAR(25), 
+artist_latitude NUMERIC(10, 3), 
+artist_location VARCHAR(100), 
+artist_longitude NUMERIC(10, 5), 
+artist_mbid VARCHAR(100), 
+artist_name VARCHAR(100), 
+artist_playmeid SMALLINT, 
+genre VARCHAR(100), 
+idx_artist_terms SMALLINT, 
+idx_similar_artists SMALLINT, 
+release VARCHAR(100), 
+release_7digitalid SMALLINT, 
+song_hotttnesss NUMERIC(10, 5), 
+song_id VARCHAR(100), 
+title VARCHAR(200), 
+track_7digitalid SMALLINT, 
+artist_mbtags VARCHAR(100), 
+artist_mbtags_count VARCHAR(100), 
+idx_artist_mbtags SMALLINT, 
+year SMALLINT
+
+
+
+
+
+# API
+# #1 get_num_songs
+# h5.root.metadata.songs.nrows
+
+# #2 get_artist_familiarity
+# h5.root.metadata.songs.cols.artist_familiarity[songidx]
+
+# #3 get_artist_hotttnesss
+# h5.root.metadata.songs.cols.artist_hotttnesss[songidx]
+
+# #4 get_artist_id
+# h5.root.metadata.songs.cols.artist_id[songidx]
+
+# #5 get_artist_mbid
+# h5.root.metadata.songs.cols.artist_mbid[songidx]
+
+# #6 get_artist_playmeid
+# h5.root.metadata.songs.cols.artist_playmeid[songidx]
+
+# #7 get_artist_7digitalid
+# h5.root.metadata.songs.cols.artist_7digitalid[songidx]
+
+# #8 get_artist_latitude
+# h5.root.metadata.songs.cols.artist_latitude[songidx]
+
+# #9 get_artist_longitude
+# h5.root.metadata.songs.cols.artist_longitude[songidx]
+
+# #10 get_artist_location
+# h5.root.metadata.songs.cols.artist_location[songidx]
+
+# #11 get_artist_name
+# h5.root.metadata.songs.cols.artist_name[songidx]
+
+# #12 get_release
+# h5.root.metadata.songs.cols.release[songidx]
+
+# #13 get_release_7digitalid
+# h5.root.metadata.songs.cols.release_7digitalid[songidx]
+
+# #14 get_song_id
+# h5.root.metadata.songs.cols.song_id[songidx]
+
+# #15 get_song_hotttnesss
+# h5.root.metadata.songs.cols.song_hotttnesss[songidx]
+
+# #16 get_title
+# h5.root.metadata.songs.cols.title[songidx]
+
+# #17 get_track_7digitalid
+# h5.root.metadata.songs.cols.track_7digitalid[songidx]
+
+# #18 get_similar_artists
+# if h5.root.metadata.songs.nrows == songidx + 1:
+#     return h5.root.metadata.similar_artists[h5.root.metadata.songs.cols.idx_similar_artists[songidx]:]
+# return h5.root.metadata.similar_artists[h5.root.metadata.songs.cols.idx_similar_artists[songidx]:
+#                                             h5.root.metadata.songs.cols.idx_similar_artists[songidx+1]]
+
+# #19 get_artist_terms
+# if h5.root.metadata.songs.nrows == songidx + 1:
+#     return h5.root.metadata.artist_terms[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:]
+# return h5.root.metadata.artist_terms[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:
+#                                         h5.root.metadata.songs.cols.idx_artist_terms[songidx+1]]
+
+# #20 get_artist_terms_freq
+# if h5.root.metadata.songs.nrows == songidx + 1:
+#     return h5.root.metadata.artist_terms_freq[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:]
+# return h5.root.metadata.artist_terms_freq[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:
+#                                           h5.root.metadata.songs.cols.idx_artist_terms[songidx+1]]
+
+# #21 get_artist_terms_weight
+# if h5.root.metadata.songs.nrows == songidx + 1:
+#     return h5.root.metadata.artist_terms_weight[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:]
+# return h5.root.metadata.artist_terms_weight[h5.root.metadata.songs.cols.idx_artist_terms[songidx]:
+#                                             h5.root.metadata.songs.cols.idx_artist_terms[songidx+1]]
+
+# #22 get_analysis_sample_rate
+# h5.root.analysis.songs.cols.analysis_sample_rate[songidx]
+
+# #23 get_audio_md5
+# h5.root.analysis.songs.cols.audio_md5[songidx]
+
+# #24 get_danceability
+# h5.root.analysis.songs.cols.danceability[songidx]
+
+# #25 get_duration
+# h5.root.analysis.songs.cols.duration[songidx]
+
+# #26 get_end_of_fade_in
+# h5.root.analysis.songs.cols.end_of_fade_in[songidx]
+
+# #27 get_energy
+# h5.root.analysis.songs.cols.energy[songidx]
+
+# #28 get_key
+# h5.root.analysis.songs.cols.key[songidx]
+
+# #29 get_key_confidence
+# h5.root.analysis.songs.cols.key_confidence[songidx]
+
+# #30 get_loudness
+# h5.root.analysis.songs.cols.loudness[songidx]
+
+# #31 get_mode
+# h5.root.analysis.songs.cols.mode[songidx]
+
+# #32 get_mode_confidence
+# h5.root.analysis.songs.cols.mode_confidence[songidx]
+
+# #33 get_start_of_fade_out
+# h5.root.analysis.songs.cols.start_of_fade_out[songidx]
+
+# #34 get_tempo
+# h5.root.analysis.songs.cols.tempo[songidx]
+
+# #35 get_time_signature(
+# h5.root.analysis.songs.cols.time_signature[songidx]
+
+# #36 get_time_signature_confidence
+# h5.root.analysis.songs.cols.time_signature_confidence[songidx]
+
+# #37 get_track_id
+# h5.root.analysis.songs.cols.track_id[songidx]
+
+# #38 get_segments_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_start[h5.root.analysis.songs.cols.idx_segments_start[songidx]:]
+# return h5.root.analysis.segments_start[h5.root.analysis.songs.cols.idx_segments_start[songidx]:
+#                                        h5.root.analysis.songs.cols.idx_segments_start[songidx+1]]
+    
+# #39 get_segments_confidence
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_confidence[h5.root.analysis.songs.cols.idx_segments_confidence[songidx]:]
+# return h5.root.analysis.segments_confidence[h5.root.analysis.songs.cols.idx_segments_confidence[songidx]:
+#                                             h5.root.analysis.songs.cols.idx_segments_confidence[songidx+1]]
+
+# #40 get_segments_pitches
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_pitches[h5.root.analysis.songs.cols.idx_segments_pitches[songidx]:,:]
+# return h5.root.analysis.segments_pitches[h5.root.analysis.songs.cols.idx_segments_pitches[songidx]:
+#                                          h5.root.analysis.songs.cols.idx_segments_pitches[songidx+1],:]
+
+# #41 get_segments_timbre
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_timbre[h5.root.analysis.songs.cols.idx_segments_timbre[songidx]:,:]
+# return h5.root.analysis.segments_timbre[h5.root.analysis.songs.cols.idx_segments_timbre[songidx]:
+#                                         h5.root.analysis.songs.cols.idx_segments_timbre[songidx+1],:]
+
+# #42 get_segments_loudness_max
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_loudness_max[h5.root.analysis.songs.cols.idx_segments_loudness_max[songidx]:]
+# return h5.root.analysis.segments_loudness_max[h5.root.analysis.songs.cols.idx_segments_loudness_max[songidx]:
+#                                               h5.root.analysis.songs.cols.idx_segments_loudness_max[songidx+1]]
+
+# #43 get_segments_loudness_max_time
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_loudness_max_time[h5.root.analysis.songs.cols.idx_segments_loudness_max_time[songidx]:]
+# return h5.root.analysis.segments_loudness_max_time[h5.root.analysis.songs.cols.idx_segments_loudness_max_time[songidx]:
+#                                                    h5.root.analysis.songs.cols.idx_segments_loudness_max_time[songidx+1]]
+
+# #44 get_segments_loudness_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.segments_loudness_start[h5.root.analysis.songs.cols.idx_segments_loudness_start[songidx]:]
+# return h5.root.analysis.segments_loudness_start[h5.root.analysis.songs.cols.idx_segments_loudness_start[songidx]:
+#                                                 h5.root.analysis.songs.cols.idx_segments_loudness_start[songidx+1]]
+
+# #45 get_sections_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.sections_start[h5.root.analysis.songs.cols.idx_sections_start[songidx]:]
+# return h5.root.analysis.sections_start[h5.root.analysis.songs.cols.idx_sections_start[songidx]:
+#                                        h5.root.analysis.songs.cols.idx_sections_start[songidx+1]]
+
+# #46 get_sections_confidence(h5,songidx=0):
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.sections_confidence[h5.root.analysis.songs.cols.idx_sections_confidence[songidx]:]
+# return h5.root.analysis.sections_confidence[h5.root.analysis.songs.cols.idx_sections_confidence[songidx]:
+#                                             h5.root.analysis.songs.cols.idx_sections_confidence[songidx+1]]
+
+# #47 get_beats_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.beats_start[h5.root.analysis.songs.cols.idx_beats_start[songidx]:]
+# return h5.root.analysis.beats_start[h5.root.analysis.songs.cols.idx_beats_start[songidx]:
+#                                     h5.root.analysis.songs.cols.idx_beats_start[songidx+1]]
+
+# #48 get_beats_confidence
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.beats_confidence[h5.root.analysis.songs.cols.idx_beats_confidence[songidx]:]
+# return h5.root.analysis.beats_confidence[h5.root.analysis.songs.cols.idx_beats_confidence[songidx]:
+#                                          h5.root.analysis.songs.cols.idx_beats_confidence[songidx+1]]
+
+# #49 get_bars_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.bars_start[h5.root.analysis.songs.cols.idx_bars_start[songidx]:]
+# return h5.root.analysis.bars_start[h5.root.analysis.songs.cols.idx_bars_start[songidx]:
+#                                    h5.root.analysis.songs.cols.idx_bars_start[songidx+1]]
+
+# #50 get_bars_confidence
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.bars_confidence[h5.root.analysis.songs.cols.idx_bars_confidence[songidx]:]
+# return h5.root.analysis.bars_confidence[h5.root.analysis.songs.cols.idx_bars_confidence[songidx]:
+#                                         h5.root.analysis.songs.cols.idx_bars_confidence[songidx+1]]
+
+# #51 get_tatums_start
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.tatums_start[h5.root.analysis.songs.cols.idx_tatums_start[songidx]:]
+# return h5.root.analysis.tatums_start[h5.root.analysis.songs.cols.idx_tatums_start[songidx]:
+#                                      h5.root.analysis.songs.cols.idx_tatums_start[songidx+1]]
+
+# #52 get_tatums_confidence(h5,songidx=0):
+# if h5.root.analysis.songs.nrows == songidx + 1:
+#     return h5.root.analysis.tatums_confidence[h5.root.analysis.songs.cols.idx_tatums_confidence[songidx]:]
+# return h5.root.analysis.tatums_confidence[h5.root.analysis.songs.cols.idx_tatums_confidence[songidx]:
+#                                           h5.root.analysis.songs.cols.idx_tatums_confidence[songidx+1]]
+
+# #53 get_artist_mbtags
+# if h5.root.musicbrainz.songs.nrows == songidx + 1:
+#     return h5.root.musicbrainz.artist_mbtags[h5.root.musicbrainz.songs.cols.idx_artist_mbtags[songidx]:]
+# return h5.root.musicbrainz.artist_mbtags[h5.root.metadata.songs.cols.idx_artist_mbtags[songidx]:
+#                                          h5.root.metadata.songs.cols.idx_artist_mbtags[songidx+1]]
+
+# #54 get_artist_mbtags_count
+# if h5.root.musicbrainz.songs.nrows == songidx + 1:
+#     return h5.root.musicbrainz.artist_mbtags_count[h5.root.musicbrainz.songs.cols.idx_artist_mbtags[songidx]:]
+# return h5.root.musicbrainz.artist_mbtags_count[h5.root.metadata.songs.cols.idx_artist_mbtags[songidx]:
+#                                                h5.root.metadata.songs.cols.idx_artist_mbtags[songidx+1]]
+
+# #55 get_year
+# h5.root.musicbrainz.songs.cols.year[songidx]
+
