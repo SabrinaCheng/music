@@ -71,9 +71,8 @@ if __name__ == '__main__':
     for directory in files.keys():
         output_file_name = ''.join( ''.join(directory.split('data/')[1:]).split('/') )
         if output_file_name not in visited:
+            songs_dict = collections.defaultdict(dict)
             for f in files[directory]:
-                print(f)
-                songs_dict = collections.defaultdict(dict)
                 songs = get_song(f, songs_dict, verbose=False)
 
             json_file = str(output_dir) + '/' + str(output_file_name) + '.json'
@@ -83,4 +82,3 @@ if __name__ == '__main__':
 
             # update checkpoint
             visited.add(output_file_name)
-            
