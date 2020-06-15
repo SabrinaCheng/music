@@ -1,6 +1,11 @@
 # analysis
+<<<<<<< HEAD
 song_id VARCHAR(100) PRIMARY KEY, 
 track_id VARCHAR(10485760), 
+=======
+song_id VARCHAR(100), 
+track_id VARCHAR(10485760) PRIMARY KEY, 
+>>>>>>> 2715e438ca035c6b968ab5a86d2415b90c35115d
 bars_start VARCHAR(10485760), 
 bars_confidence VARCHAR(10485760), 
 beats_start VARCHAR(10485760), 
@@ -33,6 +38,7 @@ start_of_fade_out NUMERIC(10, 3),
 end_of_fade_in NUMERIC(10, 3)
 
 # metadata
+<<<<<<< HEAD
 song_id VARCHAR(100) PRIMARY KEY, 
 title VARCHAR(200), 
 song_hotttnesss NUMERIC(10, 5), 
@@ -44,21 +50,44 @@ artist_7digitalid VARCHAR(7),
 artist_playmeid VARCHAR(10485760), 
 artist_mbid VARCHAR(10485760), 
 artist_name VARCHAR(10485760), 
+=======
+song_id VARCHAR(100), 
+title VARCHAR(200), 
+song_hotttnesss NUMERIC(10, 5), 
+release VARCHAR(100), 
+release_7digitalid SMALLINT, 
+track_7digitalid SMALLINT, 
+artist_id VARCHAR(25), 
+artist_7digitalid VARCHAR(7), 
+artist_playmeid SMALLINT, 
+artist_mbid VARCHAR(100), 
+artist_name VARCHAR(100), 
+>>>>>>> 2715e438ca035c6b968ab5a86d2415b90c35115d
 artist_terms VARCHAR(10485760), 
 artist_terms_freq VARCHAR(10485760), 
 artist_terms_weight VARCHAR(10485760), 
 artist_familiarity NUMERIC(10, 3), 
 artist_hotttnesss NUMERIC(10, 3), 
+<<<<<<< HEAD
 artist_location VARCHAR(10485760), 
+=======
+artist_location VARCHAR(100), 
+>>>>>>> 2715e438ca035c6b968ab5a86d2415b90c35115d
 artist_longitude NUMERIC(10, 5), 
 artist_latitude NUMERIC(10, 3), 
 similar_artists VARCHAR(10485760)
 
 
 # musicbrainz
+<<<<<<< HEAD
 song_id VARCHAR(100) PRIMARY KEY, 
 artist_mbtags VARCHAR(10485760), 
 artist_mbtags_count VARCHAR(10485760), 
+=======
+song_id VARCHAR(100), 
+artist_mbtags VARCHAR(100), 
+artist_mbtags_count VARCHAR(100), 
+>>>>>>> 2715e438ca035c6b968ab5a86d2415b90c35115d
 year SMALLINT
 
 
