@@ -26,7 +26,7 @@ def get_song(file_name, data_dict, verbose=True):
                     entry = int(entry)
                 elif isinstance(entry, np.bytes_):
                     entry = entry.decode('UTF-8')
-                data_dict[file][str(group) + '/' + str(name)] = entry
+                data_dict[file][str(group) + '/' + str(name).rstrip()] = entry
         # extract other data
         else:
             group, arr = str(leaf)[1:].split('(', 1)[0].split('/')
@@ -38,7 +38,7 @@ def get_song(file_name, data_dict, verbose=True):
                 entry = [e.decode('UTF-8') for e in entry]
             elif len(entry) > 0 and isinstance(entry[0], np.integer):
                 entry = [int(e) for e in entry]
-            data_dict[file][str(group) + '/' + str(arr)] = entry
+            data_dict[file][str(group) + '/' + str(arr).rstrip()] = entry
 
     h5.close()
 
