@@ -63,6 +63,7 @@ if __name__ == "__main__":
     
         # prepare date to insert to psql
         for f in files:
+
             with open(f) as json_file:
                 songs = json.load(json_file)
                 analysis_data = []
@@ -96,6 +97,6 @@ if __name__ == "__main__":
                     print("\nexecute_sql() error:", error)
                     conn.rollback()
 
-    # close the cursor and connection
+    # close ckeckpoint file, the cursor and connection
     cur.close()
     conn.close()

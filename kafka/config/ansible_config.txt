@@ -1,0 +1,36 @@
+---
+all:
+  vars:
+    ansible_connection: ssh
+    ansible_user: ubuntu
+    ansible_become: true
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
+    sasl_protocol: plain
+
+zookeeper:
+  hosts:
+    ip-10-0-0-10.us-west-2.compute.internal:
+    ip-10-0-0-4.us-west-2.compute.internal:
+    ip-10-0-0-7.us-west-2.compute.internal:
+    ip-10-0-0-5.us-west-2.compute.internal:
+kafka_broker:
+  hosts:
+    ip-10-0-0-4.us-west-2.compute.internal:
+    ip-10-0-0-7.us-west-2.compute.internal:
+    ip-10-0-0-5.us-west-2.compute.internal:
+schema_registry:
+  hosts:
+    ip-10-0-0-10.us-west-2.compute.internal:
+kafka_rest:
+  hosts:
+    ip-10-0-0-10.us-west-2.compute.internal:
+ksql:
+  hosts:
+    ip-10-0-0-10.us-west-2.compute.internal:
+kafka_connect:
+  hosts:
+    ip-10-0-0-10.us-west-2.compute.internal:
+control_center:
+  hosts:
+    ip-10-0-0-7.us-west-2.compute.internal:
