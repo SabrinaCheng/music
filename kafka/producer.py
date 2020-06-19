@@ -1,4 +1,4 @@
-import sys
+# import sys
 from smart_open import open
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
@@ -6,21 +6,17 @@ import json
 from datetime import datetime
 import sched, time
 
-"""simulate streaming and send to kafka"""
+"""simulate streaming and send to kafka test topic"""
 
 
-def send_message(topic, msg):
+def send_message(msg):
     """send message to topic"""
     try: 
-        producer.send(topic, value=msg)
+        producer.send('test', value=msg)
     except KafkaError as e:
         print(e)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Please enter kafka topic")
-
-    topic = sys.argv[1]
 
     # set up kafka producer
     bootstrap_servers = '10.0.0.7:9092'
@@ -43,7 +39,7 @@ if __name__ == "__main__":
         delta_ts = row['timestamp'] - original_init_ts
         row['timestamp'] = new_ts
         # print(row)
-        s.enter(delta_ts, 0, send_message, kwargs={'topic': topic, 'msg': row})
+        s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
     s.run()
 
 
