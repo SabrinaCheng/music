@@ -1,13 +1,13 @@
+"""parse row fitrec data to kafka procuder message with format: timestamp, id, userId, heart_rate"""
+
+
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import arrays_zip, explode, col
 from datetime import datetime
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print('Please enter output file')
-    
-    output_file = sys.argv[1]
+    output_file = 's3a://fitrec/proper/endomondoHR_proper_ready.json'
 
     # init spark session
     spark = SparkSession\
@@ -21,11 +21,13 @@ if __name__ == "__main__":
     fitDF = spark.read.json(input_json_path)
     # fitDF.printSchema()
 
-    # get beat subset and flat data 
+    # get beat subset and flatten data 
     beatDF = (fitDF
             .withColumn("tmp", arrays_zip("timestamp", "heart_rate"))
             .withColumn("tmp", explode("tmp"))
-            .select("id", "userId", col("tmp.timestamp"), col("tmp.heart_rate")))
+            .select(col("tmp.timestamp"), "id", "userId", col("tmp.heart_rate"))
+            .sort(col("timestamp")))
+    beatDF.select("*").show(truncate=True)
     beatDF.describe().show()
 
     n_user = beatDF.select("userId").distinct().count()
@@ -36,7 +38,7 @@ if __name__ == "__main__":
     print('===============================================================')
 
     # write to json
-    beatDF.coalesce(1).write.format('json').save(output_file)
+    beatDF.write.json(output_file)
 
     # stop spark session
     spark.stop()
