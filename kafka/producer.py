@@ -1,4 +1,4 @@
-# import sys
+import sys
 from smart_open import open
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
@@ -6,13 +6,14 @@ import json
 from datetime import datetime
 import sched, time
 
-"""simulate streaming and send to kafka test topic"""
+topic = sys.argv[1]
 
+"""simulate streaming and send to kafka topic"""
 
 def send_message(msg):
     """send message to topic"""
     try: 
-        producer.send('test', value=msg)
+        producer.send(topic, value=msg)
     except KafkaError as e:
         print(e)
 

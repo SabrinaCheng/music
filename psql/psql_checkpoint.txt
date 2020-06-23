@@ -1,0 +1,692 @@
+Finished INSERT INTO execution from songs_data/Z/ZXJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZND.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCE.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOKISQM12AB0184A3B) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZPJ.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOFXXUW12A8C1333ED) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZIF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZFB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZFD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGE.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOYDTRQ12AF72A3D61) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZDI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRG.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOGVWCC12A8C132F0A) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZLQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPH.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOQXGUH12A8C13241E) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZNR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSO.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAV.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOXMMIM12A6D4FBE2C) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZYZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZFA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOO.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOYMLDU12AAF3B22A6) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZOI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZFJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTO.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNM.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOXACZS12A8C13C5DC) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZIX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNO.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGS.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOITKXY12A8C14138A) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZYG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUS.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOGKCLR12AB017F36B) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZJG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMJ.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOKMEGD12AF72A5E7A) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZQD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZFN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYI.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SORGFNS12AB0189652) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZYT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNF.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZYP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQZ.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOCGURF12A6D4FB4C9) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZYE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCM.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SODZYMB12AF72A0512) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZDM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZON.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOLUHHS12A58A81A6B) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZRW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZWB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHB.json
+
+Finished INSERT INTO execution from songs_data/Z/ZII.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVX.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOKUAGP12A8C133B94) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZRX.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOBUDTC12A6D4F854A) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZZG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUF.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOFJCVR12AB017B678) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZDZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRT.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOJXXXQ12A6D4FAA69) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZIZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBA.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIR.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOIYPLB12A81C23886) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZPL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZDG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZZD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKQ.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOHKWKV12A58A78917) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZZT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZEJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRS.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOXIEVW12A8C13DC32) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZZS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZLE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOL.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOPFNMX12AB017BC22) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZUQ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZIT.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQG.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZBK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZRE.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJW.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOTALRM12AF729BE3C) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZJJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMV.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSM.json
+
+Finished INSERT INTO execution from songs_data/Z/ZGZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXI.json
+
+Finished INSERT INTO execution from songs_data/Z/ZMU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZSU.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXZ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQV.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOINJVD12A6D4F91D3) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZRH.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOONSSB12AF72A7C44) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZUX.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJD.json
+
+Finished INSERT INTO execution from songs_data/Z/ZOP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNH.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOOMCMK12AF72A43AB) already exists.
+
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOGCOBE12A67ADA4E1) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZCP.json
+
+Finished INSERT INTO execution from songs_data/Z/ZHL.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZVY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKF.json
+
+execute_sql() error: duplicate key value violates unique conalysis_pkey"
+DETAIL:  Key (song_id)=(SOCXAAB12A8C13DF11) already exists.
+
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOOALAI12AF72AA613) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZNC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKG.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOJRFWQ12AB0183582) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZKR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPP.json
+                                                         35394,1       Bot
+nstraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOCXAAB12A8C13DF11) already exists.
+
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOOALAI12AF72AA613) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZNC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZQY.json
+
+Finished INSERT INTO execution from songs_data/Z/ZJH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKG.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOJRFWQ12AB0183582) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZKR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPP.json
+                                         35394,1       Bot
+
+Finished INSERT INTO execution from songs_data/Z/ZJH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZTK.json
+
+Finished INSERT INTO execution from songs_data/Z/ZKG.json
+
+execute_sql() error: duplicate key value violates unique constraint "analysis_pkey"
+DETAIL:  Key (song_id)=(SOJRFWQ12AB0183582) already exists.
+
+
+Finished INSERT INTO execution from songs_data/Z/ZKR.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAS.json
+
+Finished INSERT INTO execution from songs_data/Z/ZXC.json
+
+Finished INSERT INTO execution from songs_data/Z/ZNN.json
+
+Finished INSERT INTO execution from songs_data/Z/ZAH.json
+
+Finished INSERT INTO execution from songs_data/Z/ZCW.json
+
+Finished INSERT INTO execution from songs_data/Z/ZUJ.json
+
+Finished INSERT INTO execution from songs_data/Z/ZPP.json

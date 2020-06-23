@@ -1,10 +1,10 @@
-"""parse row fitrec data to kafka procuder message with format: timestamp, id, userId, heart_rate"""
-
-
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import arrays_zip, explode, col
 from datetime import datetime
+
+"""parse row fitrec data to kafka procuder message 
+with format: timestamp, id, userId, heart_rate"""
 
 if __name__ == "__main__":
     output_file = 's3a://fitrec/proper/endomondoHR_proper_ready.json'
