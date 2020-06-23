@@ -2,7 +2,7 @@
 
 ## Introduction
 How to create a playlist for better workout?
-"Listening to music during exercise can improve results, both in terms of being a motivator (people exercise longer and more vigorously to music) and as a distraction from negatives like fatigue." "Music tempo with high motivational qualities roughly corresponds to the average person's heart rate during a routine workout." Taking the advantagies of new opportunities that wearable devices enables heart rate monitoring, this project recommends workout music based on heart rate.
+"Listening to music during exercise can improve results, both in terms of being a motivator (people exercise longer and more vigorously to music) and as a distraction from negatives like fatigue." "Music tempo with high motivational qualities roughly corresponds to the average person's heart rate during a routine workout." Taking the advantagies of new opportunities that wearable devices enable heart rate monitoring, this project recommends workout music based on heart rate.
 
 ## Demo
 
@@ -21,3 +21,8 @@ How to create a playlist for better workout?
 ![Alt text](img/tech_stack.png?raw=true "Title")
 
 ## Engineering challenges
+### propressing
+
+### recommendation algorithm
+
+
