@@ -21,8 +21,15 @@ How to create a playlist for better workout?
 ![Alt text](img/tech_stack.png?raw=true "Title")
 
 ## Engineering challenges
-### propressing
 
-### recommendation algorithm
+### Propressing
+To deal with the MemoryError when loading and transforming Fitrec raw data from AWS S3 to EC2, the project uses Spark to remove unnecessary data, and unpack timestamp and heart_rate from wide to long format. Although after the spark preprocessing, the size of file increases from ~ 4GB to ~9GB, the unpacked data makes it easier to create Kafka messages.
+![Alt text](img/spark_processing.png?raw=true "Title")
 
+
+### Recommendation algorithm
+
+
+
+![Alt text](img/kafka_multiple_topics.png?raw=true "Title")
 
