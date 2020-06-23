@@ -22,13 +22,16 @@ How to create a playlist for better workout?
 
 ## Engineering challenges
 
-### Propressing
+### Injection
+With 1,000,000 h5 files in Million Song Dataset as data source, directly injecting all h5 files is impractical. Considering there is only one read and no write operation, this project combines a batch of h5 files to json (instead of Apache Parquet) and then feed to PostgreSQL.
+
+### Preprossing
 To deal with the MemoryError when loading and transforming Fitrec raw data from AWS S3 to EC2, the project uses Spark to remove unnecessary data, and unpack timestamp and heart_rate from wide to long format. Although after the spark preprocessing, the size of file increases from ~ 4GB to ~9GB, the unpacked data makes it easier to create Kafka messages.
 ![Alt text](img/spark_processing.png?raw=true "Title")
 
 
 ### Recommendation algorithm
-
+This project has to calculate the moving average of heart rate, check whether the users need next song, and query songs based on the average heart rate, so two Kafka topics are created. The first topic calculates the average, and the second topic finds the songs to recommend to users. Because of high volumn of operations and mixed data types(int and list), Redis hashmap is used to store the resulting heart rate and songs.
 
 
 ![Alt text](img/kafka_multiple_topics.png?raw=true "Title")
