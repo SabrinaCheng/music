@@ -25,7 +25,7 @@ How to create a playlist for better workout?
 ### Injection
 With 1,000,000 h5 files in Million Song Dataset as data source, directly injecting all h5 files is impractical. Considering there is only one read and no write operation, this project combines a batch of h5 files to json (instead of Apache Parquet) and then feed to PostgreSQL.
 
-### Preprossing
+### Preprocessing
 To deal with the MemoryError when loading and transforming Fitrec raw data from AWS S3 to EC2, the project uses Spark to remove unnecessary data, and unpack timestamp and heart_rate from wide to long format. Although after the spark preprocessing, the size of file increases from ~ 4GB to ~9GB, the unpacked data makes it easier to create Kafka messages.
 ![Alt text](img/spark_processing.png?raw=true "Title")
 
