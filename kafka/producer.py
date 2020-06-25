@@ -1,4 +1,4 @@
-import sys
+# import sys
 from smart_open import open
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
@@ -6,14 +6,14 @@ import json
 from datetime import datetime
 import sched, time
 
-topic = sys.argv[1]
+# topic = sys.argv[1]
 
 """simulate streaming and send to kafka topic"""
 
 def send_message(msg):
     """send message to topic"""
     try: 
-        producer.send(topic, value=msg)
+        producer.send('raw_hr', value=msg)
     except KafkaError as e:
         print(e)
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         new_ts = row['timestamp'] - original_init_ts + init_ts
         delta_ts = row['timestamp'] - original_init_ts
         row['timestamp'] = new_ts
-        # print(row)
+        print(row)
         s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
     s.run()
 
