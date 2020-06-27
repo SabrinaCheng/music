@@ -7,6 +7,7 @@ from psycopg2.extras import execute_values
 import time
 
 BUFFER = 5
+SEC_TOPIC = 't2_0626'
 
 
 if __name__ == "__main__":
@@ -18,7 +19,7 @@ if __name__ == "__main__":
 
     # set up Kafka　consumer
     consumer = KafkaConsumer(
-        'query_song',
+        SEC_TOPIC,
         bootstrap_servers=['10.0.0.7:9092'],
         auto_offset_reset='earliest',
         value_deserializer=lambda m: json.loads(m.decode('utf-8')), 
@@ -80,7 +81,7 @@ if __name__ == "__main__":
             print(next_song)
 
             # prepare hashmap for redis
-            user_data['music_end_time'] += round(float(next_song[4]) + BUFFER, 0)
+            user_data['music_end_time'] = user_data['ts'][-1] + round(float(next_song[4]) + BUFFER, 0)
             user_data['song_id'].append(next_song[0])
             user_data['title'].append(next_song[1])
             user_data['song_hotttnesss'].append(str(next_song[3]))

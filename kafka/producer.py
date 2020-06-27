@@ -6,14 +6,14 @@ import json
 from datetime import datetime
 import sched, time
 
-# topic = sys.argv[1]
+TOPIC = 't1_0626'
 
 """simulate streaming and send to kafka topic"""
 
 def send_message(msg):
     """send message to topic"""
     try: 
-        producer.send('raw_hr', value=msg)
+        producer.send(TOPIC, value=msg)
     except KafkaError as e:
         print(e)
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
                             json.dumps(x).encode('utf-8')
                             )
     # read fitrec json file
-    input_json_path = 's3://fitrec/proper/endomondoHR_proper_ready.json/part-00000-11b9df76-54cc-403e-b60f-7644e6f546a4-c000.json'
+    input_json_path = 's3://fitrec/proper/endomondoHR_proper_ready.json/part-00001-11b9df76-54cc-403e-b60f-7644e6f546a4-c000.json'
     # simulate stream
     first_line = True
     init_ts = int(time.time())
