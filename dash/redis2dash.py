@@ -30,16 +30,19 @@ def create_fig(k):
     user_data = r.get(k)
     user_data = json.loads(user_data.decode('utf-8'))
     return {
-            'data': [
-                {'x': [datetime.fromtimestamp(t) for t in user_data['ts']], \
-                 'y': user_data['hr'], 'type': 'line', 'name': 'Heart Rate'},
-            ],
-            'layout': {
-                'title': 'Listening to ' + user_data['title'][-1] + ' by ' + user_data['artist_name'][-1]
-            }
+        'data': [
+            {'x': [datetime.fromtimestamp(t) for t in user_data['ts']], \
+            'y': user_data['hr'], 'type': 'line', 'name': 'Heart Rate'},
+        ],
+        'layout': {
+            'title': 'Listening to ' + user_data['title'][-1] + ' by ' + user_data['artist_name'][-1]
         }
+    }
 
-dropdown_opt = [{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()]
+    
+
+# dropdown_opt = [{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()]
+
 
 app.layout = html.Div(children=[
     html.H3(children='Beat & Tempo', style={
@@ -52,24 +55,45 @@ app.layout = html.Div(children=[
             'textAlign': 'center'
         }),
     dcc.Dropdown(
-        id='user-dropdown',
-        options=dropdown_opt,
+        id='user-dd'
+        ,
+        options=[{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()],
         placeholder="Select a user",
         style={
             'width': '100%'
         }
     ),
-    html.Div(id='dd-output-container'),
+    dcc.Interval(
+        id='user-dd-update',
+        interval=1000*10
+    ),
+    html.Div(id='user-graph-container'),
 ])
 
 @app.callback(
-    dash.dependencies.Output('dd-output-container', 'children'),
-    [dash.dependencies.Input('user-dropdown', 'value')])
-def update_output(value):
-    return dcc.Graph(
-        id='example-graph',
-        figure=create_fig(value)
-    )
+    dash.dependencies.Output('user-dd', 'options'),
+    [dash.dependencies.Input('user-dd-update', 'n_intervals')])
+def update_dropdown(self):
+    return [{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()]
+    # return dcc.Dropdown(
+    #                     id='user-dd',
+    #                     options=[{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()],
+    #                     placeholder="Select a user",
+    #                     style={
+    #                         'width': '100%'
+    #                     }
+    #                 )
+
+@app.callback(
+    dash.dependencies.Output('user-graph-container', 'children'),
+    [dash.dependencies.Input('user-dd', 'value')])
+def update_graph(value):
+    try:
+        return dcc.Graph(
+        id='hr-graph',
+        figure=create_fig(value))
+    except:
+        pass
 
 
 if __name__ == "__main__":
