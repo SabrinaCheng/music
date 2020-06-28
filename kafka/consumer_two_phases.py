@@ -15,6 +15,8 @@ MIN_HEART_RATE = 30
 # RECOMMENDATION BUFFER
 BUFFER = 5 
 
+TOPIC = 't1_0626'
+
 
 def add_record(dict_data, ts, wid, uid, hr):
     dict_data['id'] = wid
@@ -50,7 +52,7 @@ if __name__ == "__main__":
 
     # set up Kafka　consumer
     consumer = KafkaConsumer(
-        't1_0626',
+        TOPIC,
         bootstrap_servers=['10.0.0.7:9092'],
         auto_offset_reset='earliest',
         value_deserializer=lambda m: json.loads(m.decode('utf-8')), 
@@ -149,3 +151,8 @@ if __name__ == "__main__":
                 # add or update to redis
                 r.set(uid, json.dumps(user_data))
                 
+
+#{"timestamp":1289151990,"id":32963271,"userId":28064,"heart_rate":114}
+
+
+#{"timestamp":1289155142,"id":32963271,"userId":28064,"heart_rate":123}

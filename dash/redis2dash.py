@@ -39,35 +39,33 @@ def create_fig(k):
         }
     }
 
-    
-
-# dropdown_opt = [{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()]
 
 
 app.layout = html.Div(children=[
-    html.H3(children='Beat & Tempo', style={
-            'textAlign': 'center'
-        }),
+    html.H3(children='Beat & Tempo', 
+        style={'textAlign': 'center'}
+        ),
 
     html.Div(children=
         'Workout music recommendation based on heart rate', 
-        style={
-            'textAlign': 'center'
-        }),
+        style={'textAlign': 'center'}
+        ),
+
     dcc.Dropdown(
-        id='user-dd'
-        ,
+        id='user-dd',
         options=[{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()],
         placeholder="Select a user",
-        style={
-            'width': '100%'
-        }
-    ),
+        style={'width': '100%'}
+        ),
+
     dcc.Interval(
         id='user-dd-update',
         interval=1000*10
-    ),
-    html.Div(id='user-graph-container'),
+        ),
+
+    html.Div(
+        id='user-graph-container'
+        ),
 ])
 
 @app.callback(
@@ -75,22 +73,17 @@ app.layout = html.Div(children=[
     [dash.dependencies.Input('user-dd-update', 'n_intervals')])
 def update_dropdown(self):
     return [{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()]
-    # return dcc.Dropdown(
-    #                     id='user-dd',
-    #                     options=[{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()],
-    #                     placeholder="Select a user",
-    #                     style={
-    #                         'width': '100%'
-    #                     }
-    #                 )
+
 
 @app.callback(
     dash.dependencies.Output('user-graph-container', 'children'),
-    [dash.dependencies.Input('user-dd', 'value')])
-def update_graph(value):
+    [dash.dependencies.Input('user-dd-update', 'n_intervals'), 
+    dash.dependencies.Input('user-dd', 'value')])
+def update_graph_by_time(self, value):
     try:
         return dcc.Graph(
         id='hr-graph',
+        # animate=True, 
         figure=create_fig(value))
     except:
         pass
