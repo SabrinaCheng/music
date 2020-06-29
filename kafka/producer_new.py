@@ -1,4 +1,5 @@
 # import sys
+import boto3
 from smart_open import open
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
@@ -6,7 +7,7 @@ import json
 from datetime import datetime
 import sched, time
 
-TOPIC = 't1_0626'
+TOPIC = 't_0628'
 
 """simulate streaming and send to kafka topic"""
 
@@ -25,22 +26,25 @@ if __name__ == "__main__":
                             value_serializer=lambda x: 
                             json.dumps(x).encode('utf-8')
                             )
-    # read fitrec json file
-    input_json_path = 's3://fitrec/proper/endomondoHR_proper_ready.json/part-00001-11b9df76-54cc-403e-b60f-7644e6f546a4-c000.json'
+
+
     # simulate stream
-    first_line = True
     init_ts = int(time.time())
     s = sched.scheduler(time.time, time.sleep)
-    for line in open(input_json_path, 'rb'):
-        row = json.loads(line.decode('utf8'))
-        if first_line:
-            original_init_ts = row['timestamp']
-            first_line = False
-        new_ts = row['timestamp'] - original_init_ts + init_ts
-        delta_ts = row['timestamp'] - original_init_ts
-        row['timestamp'] = new_ts
-        print(row)
-        s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
+
+    # walk through dir and get all fitrec json files
+    s3 = boto3.resource('s3')
+    my_bucket = s3.Bucket('fitrec')
+    for object_summary in my_bucket.objects.filter(Prefix="proper/endomondoHR_proper_tenminutes.json/"):
+        if object_summary.key.endswith('.json'):
+            print(object_summary.key)
+            input_json_path = 's3://fitrec/' + object_summary.key
+            for line in open(input_json_path, 'rb'):
+                row = json.loads(line.decode('utf8'))
+                delta_ts = row['new_time']
+                row['new_time'] += init_ts
+                print(row)
+                s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
     s.run()
 
 
