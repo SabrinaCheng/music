@@ -37,7 +37,7 @@ def create_fig(k):
             'y': user_data['avg_hr'], 'type': 'line', 'name': 'Avg Heart Rate'}
         ],
         'layout': {
-            'title': 'Listening to ' + user_data['title'][-1] + ' by ' + user_data['artist_name'][-1]
+            'title': 'Listening to ' + user_data['title'][-1] + ' (' + user_data['tempo'][-1] + ' bpm) by ' + user_data['artist_name'][-1]
         }
     }
 
