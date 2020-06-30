@@ -42,6 +42,21 @@ def create_fig(k):
     }
 
 
+def create_rows(k):
+    titles = ['Song', 'Artist Name', 'Hotness', 'Tempo (bpm)', 'Duration (sec)']
+    cols = ['title', 'artist_name', 'song_hotttnesss', 'tempo', 'duration']
+    user_data = r.get(k)
+    user_data = json.loads(user_data.decode('utf-8'))
+    return html.Table([
+            html.Thead(
+                html.Tr([html.Th(t) for t in titles])
+            ),
+            html.Tbody([
+                html.Tr([
+                    html.Td(user_data[col][i]) for col in cols
+                ]) for i in range(-1, max(len(user_data['title']) * -1, -10), -1)
+            ])
+        ])
 
 app.layout = html.Div(children=[
     html.H3(children='Beat & Tempo', 
@@ -68,6 +83,10 @@ app.layout = html.Div(children=[
     html.Div(
         id='user-graph-container'
         ),
+
+    html.Div(
+        id='playlist-container'
+        ),
 ])
 
 @app.callback(
@@ -90,6 +109,15 @@ def update_graph_by_time(self, value):
     except:
         pass
 
+@app.callback(
+    dash.dependencies.Output('playlist-container', 'children'),
+    [dash.dependencies.Input('user-dd-update', 'n_intervals'), 
+    dash.dependencies.Input('user-dd', 'value')])
+def update_table(self, value, max_rows=10):
+    try:
+        return create_rows(value)
+    except:
+        pass
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
