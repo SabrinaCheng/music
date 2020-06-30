@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 import sched, time
 
-TOPIC = 't_0628'
+TOPIC = 'test_n3'
 
 """simulate streaming and send to kafka topic"""
 
@@ -33,19 +33,28 @@ if __name__ == "__main__":
     s = sched.scheduler(time.time, time.sleep)
 
     # walk through dir and get all fitrec json files
-    s3 = boto3.resource('s3')
-    my_bucket = s3.Bucket('fitrec')
-    for object_summary in my_bucket.objects.filter(Prefix="proper/endomondoHR_proper_tenminutes.json/"):
-        if object_summary.key.endswith('.json'):
-            print(object_summary.key)
-            input_json_path = 's3://fitrec/' + object_summary.key
-            for line in open(input_json_path, 'rb'):
-                row = json.loads(line.decode('utf8'))
-                delta_ts = row['new_time']
-                row['new_time'] += init_ts
-                print(row)
-                s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
+    # s3 = boto3.resource('s3')
+    # my_bucket = s3.Bucket('fitrec')
+    # for object_summary in my_bucket.objects.filter(Prefix="proper/endomondoHR_proper_tenminutes.json/"):
+    #     if object_summary.key.endswith('.json'):
+    #         print(object_summary.key)
+    #         input_json_path = 's3://fitrec/' + object_summary.key
+    #         for line in open(input_json_path, 'rb'):
+    #             row = json.loads(line.decode('utf8'))
+    #             delta_ts = row['new_time']
+    #             row['new_time'] += init_ts
+    #             print(row)
+    #             s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
+    # s.run()
+
+    input_json_path = 's3://fitrec/proper/endomondoHR_proper_thirtydays/part-00000-a80f28cd-6e42-42ca-8799-e2f82f09f50b-c000.json'
+    for line in open(input_json_path, 'rb'):
+        row = json.loads(line.decode('utf8'))
+        delta_ts = row['new_time']
+        row['new_time'] += init_ts
+        print(row)
+        s.enter(delta_ts, 0, send_message, kwargs={'msg': row})
     s.run()
 
-
+    print('finished!')
     producer.flush()

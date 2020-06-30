@@ -6,11 +6,11 @@ from datetime import datetime
 """parse row fitrec data to kafka procuder message 
 with format: timestamp, id, userId, heart_rate"""
 
-# time window: 10 mins
-TIME_WINDOW = 600
+# time window: 30 days
+TIME_WINDOW = 60 * 24 * 30
 
 if __name__ == "__main__":
-    # output_file = 's3a://fitrec/proper/endomondoHR_proper_tenminutes.json'
+    output_file = 's3a://fitrec/proper/endomondoHR_proper_thirtydays'
 
     # init spark session
     spark = SparkSession\
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     print('===============================================================')
 
     # write to json
-    # beatDF.write.json(output_file)
+    beatDF.write.json(output_file)
     # beatDF.coalesce(3).write.format('json').save(output_file)
 
     # stop spark session

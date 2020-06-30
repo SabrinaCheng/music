@@ -1,5 +1,5 @@
 import sys
-from kafka import KafkaConsumer
+from kafka import KafkaConsumer, TopicPartition
 from kafka.errors import KafkaError
 import redis
 import json
@@ -15,11 +15,12 @@ MIN_HEART_RATE = 30
 # RECOMMENDATION BUFFER
 BUFFER = 5 
 
-TOPIC = 't1_0626'
+TOPIC = 'test_n3'
 
 
-def add_record(dict_data, ts, wid, uid, hr):
-    dict_data['id'] = wid
+def create_record(dict_data, ts, wid, uid, hr):
+    dict_data['uid'] = uid
+    dict_data['wid'] = wid
     dict_data['hr'] = [hr]
     dict_data['ts'] = [ts]
     dict_data['avg_hr'] = [hr]
@@ -45,10 +46,11 @@ def update_record(dict_data, ts, wid, uid, hr):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print('Please enter Redis password')
+        print('Please enter Redis password, PostgreSQL password, and Kafka topic partition')
 
     redis_password = sys.argv[1]
     psql_password = sys.argv[2]
+    # partition = sys.argv[3]
 
     # set up Kafka　consumer
     consumer = KafkaConsumer(
@@ -57,7 +59,10 @@ if __name__ == "__main__":
         auto_offset_reset='earliest',
         value_deserializer=lambda m: json.loads(m.decode('utf-8')), 
         enable_auto_commit=True,
+        group_id='1'
         )
+    # topic_partition = TopicPartition(TOPIC, partition)
+    # consumer.assign([topic_partition])
 
     # connect to Redis
     r = redis.Redis(
@@ -85,37 +90,31 @@ if __name__ == "__main__":
     
     # only attempt to execute SQL if cursor is valid
     if cur != None:
-
         # process message from Kafka
         for message in consumer:
+            print('p', message.partition)
             message = message.value
             ts, wid, uid, hr = message.values()
             # check heart rate within normal range
             if MIN_HEART_RATE <= hr <= MAX_HEART_RATE:
                 
                 # check user exists or not
-                user_data = r.get(uid)
-                print(uid, user_data)
+                user_data = r.get(wid)
+                print(wid, user_data)
                 
-                # existing user
+                # existing workout
                 if user_data:
                     user_data = json.loads(user_data)
-                    # new workout for both existing and new users
-                    if user_data['id'] != wid:
-                        add_record(user_data, ts, wid, uid, hr)
-                    # same workout, new hr
-                    else:
-                        update_record(user_data, ts, wid, uid, hr)
-
-                else: # user doesn't exist
-                    # add new user
+                    update_record(user_data, ts, wid, uid, hr)
+                else: # workout doesn't exist
+                    # add new record
                     user_data = {}
-                    add_record(user_data, ts, wid, uid, hr)
+                    create_record(user_data, ts, wid, uid, hr)
 
             # add or update to redis
-            # key is uid, value consists of workoutid(wid), timestamp list(ts), heartrate list(hr), avghr, musicendtime
+            # key is wid, value consists of uid, workoutid(wid), timestamp list(ts), heartrate list(hr), avghr, musicendtime
             # song_id, title(metadata), song_hotttnesss(metadata), artist_name(metadata), tempo(analysis), duration(analysis)
-            r.set(uid, json.dumps(user_data))
+            r.set(wid, json.dumps(user_data))
 
             # send message to query_song topic if the user needs next song
             if user_data['music_end_time'] <= ts:
@@ -149,10 +148,5 @@ if __name__ == "__main__":
                 user_data['duration'].append(str(next_song[4]))
 
                 # add or update to redis
-                r.set(uid, json.dumps(user_data))
+                r.set(wid, json.dumps(user_data))
                 
-
-#{"timestamp":1289151990,"id":32963271,"userId":28064,"heart_rate":114}
-
-
-#{"timestamp":1289155142,"id":32963271,"userId":28064,"heart_rate":123}

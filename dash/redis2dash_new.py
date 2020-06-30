@@ -33,6 +33,8 @@ def create_fig(k):
         'data': [
             {'x': [datetime.fromtimestamp(t) for t in user_data['ts']], \
             'y': user_data['hr'], 'type': 'line', 'name': 'Heart Rate'},
+            {'x': [datetime.fromtimestamp(t) for t in user_data['ts']], \
+            'y': user_data['avg_hr'], 'type': 'line', 'name': 'Avg Heart Rate'}
         ],
         'layout': {
             'title': 'Listening to ' + user_data['title'][-1] + ' by ' + user_data['artist_name'][-1]
@@ -54,7 +56,7 @@ app.layout = html.Div(children=[
     dcc.Dropdown(
         id='user-dd',
         options=[{'label': k.decode("utf-8"), 'value': k.decode("utf-8")} for k in r.keys()],
-        placeholder="Select a user",
+        placeholder="Select a workout",
         style={'width': '100%'}
         ),
 
