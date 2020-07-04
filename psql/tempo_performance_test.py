@@ -105,15 +105,6 @@ if __name__ == "__main__":
     print(t2)
     print(t3)
     print(t4)
-    plt.plot(avg_hrs, t1, color='red', linewidth=2)
-    plt.plot(avg_hrs, t2, color='olive', linewidth=2)
-    plt.plot(avg_hrs, t3, color='olive', linewidth=2)
-    plt.plot(avg_hrs, t4, color='olive', linewidth=2)
-    plt.show()
-
-
-    
-        
 
                 
     # close the cursor and connection
